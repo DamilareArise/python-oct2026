@@ -1,0 +1,271 @@
+# print(20 + 20)
+# print("Welcome to class Elijah")
+
+""" 
+qwerty qwerty qwerty
+qwerty qwerty qwerty
+"""
+
+# print("Hello")
+
+# def welcome():
+#     print("You are welcome")
+    
+# Python variables
+# variable name, assignment operator, value
+
+name = "Elijah"
+basket = "Apple"
+number = 60
+
+# print(basket)
+# basket = "Orange"
+# print(basket)
+
+# rules guiding variable declaration 
+# 1. a variable does not contain spaces only alphabet, number and underscore
+first_name_of_the_student = 'Ifeoluwa'  # snake
+# firStNameOfTheStudent # camel
+# FirstNameOfTheStudent #pascal
+
+# 2. You can not start a variable name with a number
+# _2nd_day = 
+# 3. Variable name should be descriptive 
+# student_name = "Ayomide"
+
+# Types of variable declaration 
+# 1. single variable, single value 
+student_name = "Ayomide"
+# print(student_name)
+
+# 2. single variable, multiple values 
+students = "Michael", "Anne", "Jerry"
+# print(students)
+
+# 3. multiple variable, single value
+# a = b = c = 10
+# a = 10
+# b = 10
+# c = 10
+
+b = 20
+# print(a) 
+
+# 4. multiple variable multiple values
+ade, bola, ola = 20, 10, 10
+# print(ola)
+
+# concatenation: joining two or more strings
+
+username = "Damilare"
+course = "Python"
+duration = 2
+duration_unit = "months"
+
+# print("Welcome, " + username + ". This is " + course + " class. Its for " + str(duration) + duration_unit )
+
+# fullname = input("Fullname: ")
+# age =  int(input("Age: "))
+
+# print("My name is " + fullname + ". I am " + str(age) + "Years old")
+
+# print("My name is", fullname , ". I am " , age , "Years old")
+
+# f-string
+# print(f"My name is {fullname}. I am {age}years old")
+
+# fullname = input("Fullname: ")
+# print(fullname)
+
+
+# value1 = int(input("Value1: "))
+# value2 = int(input("Value2: "))
+# print(value1 + value2)
+
+
+
+# Python datatypes
+# 1. Number type: int, float, complex
+num = 45
+num2 = 45.5
+num3  = 2 + 3j
+# print(type(num2))
+
+# 2. Text type: strings
+text = "It's mine"
+# print(type(text))
+
+# 3. Sequence Type: list, tuple, range
+my_tuple = ('bag', 'shoes', 'cloth')
+# print(type(my_tuple))
+my_list = ['bag', 'shoes', 'cloth']
+# print(type(my_list))
+
+numbers = range(1, 21, 2)
+# print(list(numbers))
+
+# 4. Boolean Type: True, False
+is_active = True
+# print(type(is_active))
+
+# 5. Mapping Type: Dictionary
+student = {
+    "fullname": "Temi Tayo", 
+    "course": "AI", 
+    "age": 20,
+    "address": {
+        "city": "Ikeja",
+        "state": 'Lagos State',
+        "country": "Nigeria"
+    }
+    }
+
+
+# print(student["fullname"])
+# print(student["age"])
+# print(student['address']['city'])
+
+# 6.  Set Type 
+# my_set = {'bag', 'shoes', 'cloth'}
+# print(my_set)
+
+setA = {3, 5, 6, 7, 2, 2, 1, 8, 4, 9}
+# print(setA)
+
+# 7. None Type
+val1 = None
+# print(val1)
+
+# 8. binary type; bytes, bytearray, memoryview
+
+# print(float(45))
+# print(int(45.5))
+
+# str(42) # "45"
+# int("2")
+
+
+
+# python operators.
+
+# 1.  Arithmetic Operator: +, - , *, /, //, %
+# print(5 % 2)
+
+# 2. Assignment operator: =, +=, -=, *= , etc.
+var = 2
+# var += 2 # var = var + 2
+# print(var) 
+
+# 3. comparison operator: ==, !=, >, <, >=, <=
+# print(var <= 2)
+
+# 4. Logical operator: AND, OR, NOT
+""" 
+A       B       AND     OR      NOT A    XOR
+0       0       0       0       1         0
+0       1       0       1       1         1
+1       0       0       1       0         1
+1       1       1       1       0         0
+
+"""
+# email = True
+# password = False
+
+# email = 1
+# password = 0
+
+# email = "dami@gmail.com"
+# password = None
+
+# print(email and password)
+
+# 5. Membership operator:  in, not in
+
+students = ['Michael', "Anne", "Al-ameen", "williams"]
+# print("Ayomide" in students)
+# print("michael" not in students)
+var = 6
+# if var in range(1, 6):
+#     print("Yes oo")
+# else:
+#     print("No eeh")
+# "d" in "dami"
+
+# email = input("Email: ")
+# if "." in email and "@" in email:
+#     print("Email is valid")
+# else:
+#     print("Invalid email")
+
+# 6. identity operator: is, is not
+var2 = 6
+# print(var is var2)
+
+
+# 7. bitwise operator: 
+""" 
+& - and
+| - or
+^ - xor
+~ - not
+
+
+2 | 10
+    5  r 0
+    2  r 1
+    1  r 0
+    0  r 1
+    
+    10100
+     1010
+    00000
+"""
+print(bin(20))   
+print(bin(10))   
+print(10 ^ 20)
+
+
+    
+    
+    
+    
+    
+# conditional statement (if/else statement)
+
+# var = float(input("Your Value: "))
+# if var == 2:
+#     print("Yes ooo")
+# else:
+#     print("No eeh!")  
+    
+# if var >= 1 and var <= 5:
+#     print("Yes ooo")
+# else:
+#     print("No ehh")
+
+
+# below minimum wage, minimum wage, above minimum wage
+
+# minimum_wage = 70000
+
+# salary = float(input("Salary: ") or 0 )
+
+# if salary > 0 and salary < 70000:
+#     print("Below minimum wage")
+# elif salary == minimum_wage:
+#     print("Minimum wage")
+# elif salary > minimum_wage:
+#     print("Above minimum wage")
+# else:
+#     print("Invalid value")
+
+# 70-100 A
+# 60 - 69 B 
+# 50 - 59 C
+# 44 - 49 D
+# 40 - 44 E
+# 0 - 39 F
+
+
+
+# Assignment :- A simple calculator
