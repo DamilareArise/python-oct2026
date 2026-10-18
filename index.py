@@ -220,15 +220,11 @@ var2 = 6
      1010
     00000
 """
-print(bin(20))   
-print(bin(10))   
-print(10 ^ 20)
+# print(bin(20))   
+# print(bin(10))   
+# print(10 ^ 20)
 
 
-    
-    
-    
-    
     
 # conditional statement (if/else statement)
 
@@ -266,6 +262,45 @@ print(10 ^ 20)
 # 40 - 44 E
 # 0 - 39 F
 
+# Nested if/else
 
+# USSD - system
+# *312#
 
-# Assignment :- A simple calculator
+ussd = input("USSD: ")
+if ussd == "*312#":
+    print("""
+       1. Buy Data
+       2. Check Balance
+       #. Exit 
+    """)
+    choice = input("Choice: ")
+    if choice == "1":
+        print("""
+        1. Daily plan
+        2. Weekly plan
+        3. Monthly plan     
+        """)
+        choice = input("Choice: ")
+        if choice == "1":
+           print("Daily Plan")
+        elif choice == "2":
+            print("Weekly")
+    elif choice == "2":
+        print("Your balance is ***** ")
+    elif choice == "#":
+        exit("Goodbye!")
+        
+    else:
+        print("Invalid option.")
+     
+else:
+    print("Invalid ussd code")
+    
+    
+    
+
+# Python Strings
+# Python collection or array
+
+# Assignment: Build a simple CBT application
