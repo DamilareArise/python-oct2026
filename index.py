@@ -267,40 +267,141 @@ var2 = 6
 # USSD - system
 # *312#
 
-ussd = input("USSD: ")
-if ussd == "*312#":
-    print("""
-       1. Buy Data
-       2. Check Balance
-       #. Exit 
-    """)
-    choice = input("Choice: ")
-    if choice == "1":
-        print("""
-        1. Daily plan
-        2. Weekly plan
-        3. Monthly plan     
-        """)
-        choice = input("Choice: ")
-        if choice == "1":
-           print("Daily Plan")
-        elif choice == "2":
-            print("Weekly")
-    elif choice == "2":
-        print("Your balance is ***** ")
-    elif choice == "#":
-        exit("Goodbye!")
+# ussd = input("USSD: ")
+# if ussd == "*312#":
+#     print("""
+#        1. Buy Data
+#        2. Check Balance
+#        #. Exit 
+#     """)
+#     choice = input("Choice: ")
+#     if choice == "1":
+#         print("""
+#         1. Daily plan
+#         2. Weekly plan
+#         3. Monthly plan     
+#         """)
+#         choice = input("Choice: ")
+#         if choice == "1":
+#            print("Daily Plan")
+#         elif choice == "2":
+#             print("Weekly")
+#     elif choice == "2":
+#         print("Your balance is ***** ")
+#     elif choice == "#":
+#         exit("Goodbye!")
         
-    else:
-        print("Invalid option.")
+#     else:
+#         print("Invalid option.")
      
-else:
-    print("Invalid ussd code")
+# else:
+#     print("Invalid ussd code")
     
     
-    
+
 
 # Python Strings
-# Python collection or array
+
 
 # Assignment: Build a simple CBT application
+
+# print("1. what is the capital of Osun state. a. Osogbo b. Ilorin")
+# user = input("Ans: ").strip().lower()
+# if user == "a":
+#     print("correct")
+# else:
+#     print("Wrong")
+
+
+text = "how are you doing" # ["H", "o", "w", " ", "a"...]
+# print(text[-1]) 
+# slice
+# print(text[0:4]) 
+# print(text[8:11])
+
+# text[0] = "h" #error
+# print(text.lower())
+# print(text.capitalize())
+# print(text.title())
+
+# print(len(text))
+# print(len(text.strip()))
+
+# text = text.strip("!@%$")
+
+# text = text.replace("!","")
+# text = text.replace("@","")
+# text = text.replace(" ","")
+# print(text)
+
+# slug creator
+# product = "Kukuli Alata Yeriri"
+# slug = product.lower().replace(" ", "-")
+# print(slug)
+
+# print(text.startswith("H"))
+# print(text.endswith("H"))
+
+# splited = text.split()
+# print(splited)
+
+# print(" + ".join(splited))
+
+# Class work
+# build a word counter
+
+
+# print(text.find("area"))
+# print(text.index("o", 2, 10))
+
+
+# special character
+# \t - tab
+# \n - next line
+# \r - return 
+# \b - backspace
+#  \ - escape character
+
+# print("How are \tyou")
+# print("How are \nyou")
+# print("How are \b\byou")
+# print("How are \\byou")
+
+# print(r"C:\Users\Welcome\OneDrive\Desktop\general\opay-page\index.html")
+
+
+# Python collection or array
+# 1. List [] or list() : Ordered, mutable/changeable, can be indexed and allows duplicate value
+
+garage = ['Tesla', "benz", "Escalade", "Ferrari", "Benz"]
+# print(len(garage))
+# print(garage[-2])
+# print(garage[0:2])
+
+# garage[-1] = "Bugatti"
+
+# garage.reverse()
+# print(garage[::-1])
+
+# garage.append("Bugatti")
+# garage.extend(["Bugatti", "Toyota"])
+# garage.insert( 1, "Bugatti")
+
+# garage.pop(1)
+# garage.remove("Benz")
+# print(garage.count("Benz"))
+# print(garage.index("Benz"))
+
+gar = garage.copy()
+
+# garage.pop()
+# print(garage)
+# print(gar)
+
+garage.sort(key=str.lower, reverse=True)
+
+print(garage)
+
+# 2. Tuple
+# 3. Set
+# 4. Dictionary
