@@ -392,16 +392,128 @@ garage = ['Tesla', "benz", "Escalade", "Ferrari", "Benz"]
 # print(garage.count("Benz"))
 # print(garage.index("Benz"))
 
-gar = garage.copy()
+# gar = garage.copy()
 
 # garage.pop()
 # print(garage)
 # print(gar)
 
-garage.sort(key=str.lower, reverse=True)
+# garage.sort(key=str.lower, reverse=True)
 
-print(garage)
+# print(garage)
 
-# 2. Tuple
+# 2. Tuple () or tuple(): ordered, can be indexed, immutable/unchangeable, allows duplicate
+garage = ('Tesla', "benz", "Escalade", "Ferrari", "Benz")
+# print(garage[0:3])
+# print(type(garage))
+
+# garage[0] = "Bugatti"
+# garage = list(garage)
+# garage[0] = "Bugatti"
+# garage = tuple(garage)
+# print(garage)
+
+# unpacking
+# a, b, c, d, e = garage
+# *a, = garage
+# *a, b = garage
+# c, *a, b = garage
+# *a, b, c = garage
+# print(c)
+
+# print(garage.count("Benz"))
+# print(garage.index("Tesla"))
+
+
+score = [23, 45, 33, 50]
+# print(sum(score))
+# print(min(score))
+# print(max(score))
+
+# avg = sum(score)/len(score)
+# print(avg)
+
+
+# Python Loop.
+# 1. For loop: iterate over a sequence type e.g tuple, list, range, string, set, dict
+
+# name = "Ayomide"
+# for letter in name:
+#     print(letter)
+#     print("____")
+
+# for car in garage:
+#     print(f"I own a {car}")
+
+# for i in range(10):
+#     print(i)
+
+
+# 2. while loop: iteration based on a condition
+# balance = 100
+# while balance > 0:
+#     balance -= 10
+#     print("Give me the money ehh.. Balance:", balance)
+
+# x = 0
+# while x < 10:
+#     x += 1
+#     print(x)
+    
+
+# ticket = 10
+# while ticket > 0:
+#     age = int(input("Age: "))
+#     if age < 18:
+#         print("Come back when you are 18")
+#         continue
+    
+#     if ticket < 5:
+#         print("No more ticket")
+#         break
+    
+        
+#     print("Oya come in...")
+#     ticket -= 1
+#     print("Ticket:", ticket)
+    
+
+# todo app 
+database = []
+print("Welcome to myTodo app")
+while True:
+    print("""
+        1. Add todo
+        2. View todo
+        3. Edit todo
+        4. Delete todo
+        #. Exit    
+    """)
+    
+    choice = input("Choice: ").strip()
+    if choice == "1":
+        todo = input("Todo: ").strip().capitalize()
+        if not todo:
+            print("Todo can not be empty!")
+            continue
+        
+        database.append(todo)
+        print("Todo Added..")
+        
+    elif choice == "2":
+        if not database:
+            print("No todo added!")
+            continue
+        
+        no = 1
+        for item in database:
+            print(f"{no}. {item}")
+            no += 1
+    
+    elif choice == "#":
+        print("Bye..")
+        break
+
+
 # 3. Set
 # 4. Dictionary
