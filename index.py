@@ -479,40 +479,90 @@ score = [23, 45, 33, 50]
     
 
 # todo app 
-database = []
-print("Welcome to myTodo app")
-while True:
-    print("""
-        1. Add todo
-        2. View todo
-        3. Edit todo
-        4. Delete todo
-        #. Exit    
-    """)
+# database = []
+# print("Welcome to myTodo app")
+# while True:
+#     print("""
+#         1. Add todo
+#         2. View todo
+#         3. Edit todo
+#         4. Delete todo
+#         #. Exit    
+#     """)
     
-    choice = input("Choice: ").strip()
-    if choice == "1":
-        todo = input("Todo: ").strip().capitalize()
-        if not todo:
-            print("Todo can not be empty!")
-            continue
+#     choice = input("Choice: ").strip()
+#     if choice == "1":
+#         todo = input("Todo: ").strip().capitalize()
+#         if not todo:
+#             print("Todo can not be empty!")
+#             continue
         
-        database.append(todo)
-        print("Todo Added..")
+#         database.append(todo)
+#         print("Todo Added..")
         
-    elif choice == "2":
-        if not database:
-            print("No todo added!")
-            continue
+#     elif choice == "2":
+#         if not database:
+#             print("No todo added!")
+#             continue
         
-        no = 1
-        for item in database:
-            print(f"{no}. {item}")
-            no += 1
+#         no = 1
+#         for item in database:
+#             print(f"{no}. {item}")
+#             no += 1
     
-    elif choice == "#":
-        print("Bye..")
-        break
+#     elif choice == "#":
+#         print("Bye..")
+#         break
+
+
+# nested forloop
+
+# array = ['item1', 'item2', 'item3']
+# num = [1, 2, 3]
+# for i in array:
+#     print(i)
+#     for x in num:
+#         print(x)
+
+# for i in range(1, 6):
+#     print(i,"times table")
+#     for x in range(1, 6):
+#         print(f"{i} x {x} = {i*x}")
+   
+        
+# Data structure & algorithm
+
+
+questions = [
+    "What is capital of Lagos state a. Ikeja  b. Badagry",
+    "What is capital of Oyo state a. Ikeja  b. Ibadan",
+    "What is capital of Osun state a. Ikeja  b. Osogbo",
+]
+
+# answer = ["a", "b", "b"]
+
+
+# q_and_a = [
+#     ("What is capital of Lagos state a. Ikeja  b. Badagry", "a"),
+#     ("What is capital of Lagos state a. Ikeja  b. Badagry", "a"),
+#     ("What is capital of Lagos state a. Ikeja  b. Badagry", "a"),
+# ]
+
+# score = 0
+# for ques, ans in zip(questions, answer):
+# # for ques, ans in q_and_a:
+#     print(ques)
+#     # print(ans)
+#     user_ans = input("ans: ").strip().lower()
+#     if user_ans == ans:
+#         print("correct")
+#         score += 2
+#     else:
+#         print("wrong")
+    
+
+for enum, ques in enumerate(questions, start=1):
+    print(f"{enum}. {ques}")
 
 
 # 3. Set
