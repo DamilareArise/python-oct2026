@@ -87,7 +87,18 @@ def sub10():
 # add10()
 # sub10()
 
-
+database = [
+    {
+        "fullname": "TOlulope",
+        "email": "tolu@gmail.com",
+        "password": "1234"
+    },
+    {
+        "fullname": "TOlulope",
+        "email": "tolu@gmail.com",
+        "password": "1234"
+    }
+]
 
 bal = 0
 
@@ -153,3 +164,55 @@ home()
 # class 
 # 1. Write a function that checks if a word is a palindrome e.g MUM
 # 2. Convert your todo app to a functional programming approach
+
+
+
+
+# OOP - Object Oriented programming
+# object - a properties + functions
+# class - a blueprint of an object. an object is an instance of a class
+# self - it is used for refrencing
+
+# 1. Write a reusable code
+# 2. Modularized
+
+class Todo:
+    # properties / attributes
+    app_name = "Best TodoApp"
+    
+    def home(self):
+        print(f"Helloo Welcome to {self.app_name}")
+        print("""
+            1. Add Todo
+            2. View Todo      
+            #. Exit
+        """)
+        choice = input("Choice: ")
+        if choice == "1":
+           self.add_todo()
+        elif choice == "2":
+            self.view_todo()
+        elif choice == "#":
+            exit("Goodbye!")
+        else:
+            print("Invalid Option") 
+            
+        self.home()
+    
+    def add_todo(self):
+        print("add todo")
+        
+    def view_todo(self):
+        print("view todo")
+    
+
+mytodo = Todo()
+feranmi_todo = Todo()
+
+
+
+# feranmi_todo.app_name = "Feranmi's Todo"
+# print(mytodo.app_name)
+# print(feranmi_todo.app_name)
+
+# mytodo.home()
