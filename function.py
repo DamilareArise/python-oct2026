@@ -158,7 +158,7 @@ def check_balance():
     home()
     
     
-home()
+# home()
     
     
 # class 
@@ -206,13 +206,114 @@ class Todo:
         print("view todo")
     
 
-mytodo = Todo()
-feranmi_todo = Todo()
-
-
-
+# mytodo = Todo()
+# feranmi_todo = Todo()
 # feranmi_todo.app_name = "Feranmi's Todo"
+# feranmi_todo.home()
+
+
+
+
 # print(mytodo.app_name)
 # print(feranmi_todo.app_name)
+# feranmi_todo.home()
 
-# mytodo.home()
+
+
+# The constructor function
+
+class Human:
+    first_name = None
+    last_name = None
+    
+    
+    def __init__(self, fn, ln):
+        # print("Welcome..")
+        # self.describe()
+        
+        self.first_name = fn
+        self.last_name = ln
+        
+    
+    def describe(self):
+        print(f"My name is {self.first_name} {self.last_name}")
+        
+    
+        
+
+# man1 = Human("Dami", "Ojo")
+# man1.describe()
+
+
+
+# 4pillars of OOP
+# Inheritance
+# Encapsulation: private, public, protected, static
+# Polymophorsm
+# Abstraction
+
+balance = 10
+class Bank:
+    __balance = 0
+    
+    def __init__(self):
+       pass
+    
+    def menu(self):
+        print("""
+        1. Deposit
+        2. Withdraw
+        3. Check balance
+        #. exit      
+        """)
+        
+        choice = input("Choice: ")
+        if choice == "1":
+            self.__deposit()
+        elif choice == "2":
+            self.__withdraw()
+        elif choice == "3":
+            self.__check_balance()
+        elif choice == "#":
+            exit()
+        else:
+            print("You no sabi wetin you dey do")
+    
+    def __deposit(self):
+        amount = float(input("Amount: "))
+        self.__balance += amount
+        print(f"Your #{amount} deposit was successful. your balance is #{self.__balance}")
+        
+        self.menu()
+            
+    def __withdraw(self):
+        amount = float(input("Amount: "))
+        if amount > self.__balance:
+            print("Insufficient fund")
+        else:
+            self.__balance -= amount
+            print(f"Your #{amount} deposit was successful. your balance is #{self.__balance}")
+            
+        self.menu()
+                
+    def __check_balance(self):
+        print(f"Your balance is #{self.__balance}")
+        self.menu()
+        
+    def get_balance(self):
+        return self.__balance
+    
+    def add(self, amount):
+        self.__balance += amount
+        
+
+bank = Bank()
+# print(bank.__balance)
+
+# bank.__balance = 100000
+# print(bank.__balance)
+
+# bank.__check_balance()
+# bank.menu()
+
+# getters and setters function
