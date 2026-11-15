@@ -307,7 +307,7 @@ class Bank:
         self.__balance += amount
         
 
-bank = Bank()
+# bank = Bank()
 # print(bank.__balance)
 
 # bank.__balance = 100000
@@ -317,3 +317,38 @@ bank = Bank()
 # bank.menu()
 
 # getters and setters function
+
+
+class Parent:
+    first_name = None
+    last_name = "Doe"
+    
+    def __init__(self, fn):
+        self.first_name = fn
+    
+        
+    def describe(self):
+        print(f"My name is {self.first_name} {self.last_name}")
+        
+# par = Parent("Jayjay")
+# par.describe()
+        
+    
+class Child(Parent):
+    hobby = None
+    
+    def __init__(self, fn, likes):
+        self.hobby = likes
+        
+        super().__init__(fn) 
+   
+    def relax(self):
+       print(f"{self.first_name} is {self.hobby}")
+       
+    # def describe(self):
+    #     print("yo!")
+    
+    
+chi = Child("Tobby", "Swimming")
+# chi.describe()
+# chi.relax()
