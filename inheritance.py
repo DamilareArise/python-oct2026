@@ -1,58 +1,8 @@
+# import backend
+from backend import genrate_account_no, BankBackend as BK
 
 
-class BankBackend:
-    __balance = 0
-    
-    __db = []
-    
-    
-    def register_user(self, fullname, email, password):
-        if not fullname or not email or not password:
-            return "All fields are required."
-        
-        else:
-            for data in self.__db:
-                if data["email"] == email:
-                    return "Email already exist"
-            
-            user = {
-                "fullname": fullname,
-                "email": email,
-                "password": password,
-                "balance": 0.0
-            }
-            self.__db.append(user)
-            print(self.__db)
-            return "Account created successfully"
-            
-        
-    
-
-    def get_balance(self):
-        return self.__balance
-        
-    
-    def add_to_balance(self, amount):
-        if amount < 1:
-            return "Amount can't be less that #1"
-        else:
-            self.__balance += amount
-            return f"Deposit successfull. Your new balance is #{self.__balance}"
-        
-        
-    def remove_from_balance(self, amount):
-        if amount < 1:
-            return "Amount can't be less that #1"
-        elif amount > self.__balance:
-            return "Insufficient Fund"
-        else:
-            self.__balance -= amount
-            return f"Withdrawal successfull. Your new balance is #{self.__balance}"
-
-
-
-
-class BankFrontend(BankBackend):
+class BankFrontend(BK):
     
     def home(self):
         print("""
@@ -126,3 +76,12 @@ class BankFrontend(BankBackend):
         
 bk = BankFrontend()
 bk.home()
+
+
+
+
+# scripts: its a single file that a contains a python code.
+# modules: is a scripts that contains functions, variables and classes
+# libraries: its a combination of two or more modules 
+# frameworks: its a combination of two or more libraries of a particular programming language that streamlines to worklow of a concept/area e.g django (web framework for python), tensorflow/ keras (AI models), Scikit-learn (Machine Models )
+
